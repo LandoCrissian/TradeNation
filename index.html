@@ -2,112 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=0">
   <title>Trade Nation // $TRDN</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0e0e0e;
-      --accent: #ffaa00;
-      --text: #f0f0f0;
-      --muted: #999;
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      overflow-x: hidden;
     }
 
-    body {
-      margin: 0;
+    .hero {
+      background: url('https://raw.githubusercontent.com/LandoCrissian/TradeNation/refs/heads/main/BBC837F5-B3BB-4BB3-9FEF-57B938DE6310.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 90%;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+
+    .logo img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
       font-family: 'Orbitron', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0;
+      color: #ffaa00;
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 2rem 1rem;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #ffaa00;
+      font-size: 1.8rem;
+    }
+
+    .roadmap {
       display: flex;
       flex-direction: column;
+      gap: 2rem;
+    }
+
+    .roadmap-item {
+      border-left: 3px solid rgba(255, 170, 0, 0.3);
+      padding-left: 1.5rem;
+    }
+
+    .roadmap-item.active {
+      border-color: #ffaa00;
+    }
+
+    .phase {
+      color: #ffaa00;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .roadmap-item h3 {
+      margin: 0.5rem 0;
+    }
+
+    .roadmap-item ul {
+      padding-left: 1rem;
+      list-style: none;
+    }
+
+    .roadmap-item li::before {
+      content: '•';
+      color: #ffaa00;
+      margin-right: 0.5rem;
+    }
+
+    .cta-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
       align-items: center;
-      padding: 2rem;
-    }
-
-    header {
-      text-align: center;
-      max-width: 900px;
-      margin-bottom: 3rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: var(--accent);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin-top: 1rem;
-    }
-
-    .cta-buttons {
       margin-top: 2rem;
     }
 
-    .cta-buttons a {
-      background: var(--accent);
-      color: var(--bg);
-      padding: 0.75rem 1.5rem;
-      margin: 0.5rem;
+    .cta-button {
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: background 0.3s;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
     }
 
-    .cta-buttons a:hover {
-      background: #cc8800;
+    .primary {
+      background: linear-gradient(45deg, #ffaa00, #ff7700);
+      color: #000;
     }
 
-    section {
-      max-width: 900px;
-      margin-top: 4rem;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    section p {
-      line-height: 1.6;
-      color: var(--text);
+    .secondary {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
     }
 
     footer {
-      margin-top: 5rem;
       text-align: center;
+      padding: 2rem;
+      color: #666;
       font-size: 0.9rem;
-      color: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .cta-container {
+        flex-direction: row;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .tagline {
+        font-size: 1.2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Crypto with Callouses</h1>
-    <p>$TRDN is the token of the working class. Built for the ones who grind.</p>
-    <div class="cta-buttons">
-      <a href="https://discord.gg/8CnJJDwC" target="_blank">Join the Discord</a>
-      <a href="https://x.com/tradenationtrdn?s=21" target="_blank">Follow on 𝕏</a>
+
+  <div class="hero">
+    <div class="hero-content">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/LandoCrissian/TradeNation/refs/heads/main/970C5BAC-67E3-4025-8A62-F124FF1B2D37.png" alt="Trade Nation Logo">
+      </div>
+      <h1>TRADE NATION</h1>
+      <p class="tagline">Crypto with Callouses</p>
+      <p class="subtitle">$TRDN is the token of the working class.<br>Built for the ones who grind.</p>
     </div>
-  </header>
+  </div>
 
-  <section id="about">
-    <h2>What is Trade Nation?</h2>
-    <p>Trade Nation is a movement for those who keep the world moving — builders, healers, fixers, drivers, and everyone in between.
-    $TRDN is a token that represents sweat equity. It’s time the backbone of society had a stake in the future they build.</p>
-  </section>
+  <div class="container">
+    <section class="card">
+      <h2>What is Trade Nation?</h2>
+      <p>Trade Nation is a movement for those who keep the world moving — builders, healers, fixers, drivers, and everyone in between. $TRDN is a token that represents sweat equity. It's time the backbone of society had a stake in the future they build.</p>
+    </section>
 
-  <section id="vision">
-    <h2>The Vision</h2>
-    <p>$TRDN will power tools for the working class: job bounties, verified labor rewards, gear NFTs, sponsorship pools, and more. We're just getting started.</p>
-  </section>
+    <section class="card">
+      <h2>The Vision</h2>
+      <p>$TRDN will power tools for the working class: job bounties, verified labor rewards, gear NFTs, sponsorship pools, and more. We're just getting started.</p>
+    </section>
 
-  <footer>
-    © 2025 Trade Nation. All rights reserved.
-  </footer>
+    <section class="card">
+      <h2>Roadmap</h2>
+      <div class="roadmap">
+        <div class="roadmap-item active">
+          <div class="phase">Phase 1</div>
+          <div class="content">
+            <h3>Token Launch</h3>
+            <ul>
+              <li>Launch on Cronos Network</li>
+              <li>Community Building</li>
+              <li>Marketing Campaign</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="phase">Phase 2</div>
+          <div class="content">
+            <h3>Platform Development</h3>
+            <ul>
+              <li>Job Bounty System</li>
+              <li>Labor Verification</li>
+              <li>Partnership Program</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="phase">Phase 3</div>
+          <div class="content">
+            <h3>Ecosystem Growth</h3>
+            <ul>
+              <li>NFT Marketplace</li>
+              <li>Rewards Platform</li>
+              <li>Community DAO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Join the Movement</h2>
+      <div class="cta-container">
+        <a href="https://discord.gg/8CnJJDwC" target="_blank" class="cta-button primary">
+          <i class="fab fa-discord"></i> Join Discord
+        </a>
+        <a href="https://x.com/tradenationtrdn?s=21" target="_blank" class="cta-button secondary">
+          <i class="fab fa-x-twitter"></i> Follow on 𝕏
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Trade Nation. All rights reserved.</p>
+    </footer>
+  </div>
+
 </body>
 </html>
