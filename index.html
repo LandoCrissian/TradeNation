@@ -17,7 +17,8 @@
     }
 
     .hero {
-  background: url('https://raw.githubusercontent.com/LandoCrissian/TradeNation/refs/heads/main/BBC837F5-B3BB-4BB3-9FEF-57B938DE6310.png') no-repeat left center;
+  background: url('https://raw.githubusercontent.com/LandoCrissian/TradeNation/refs/heads/main/BBC837F5-B3BB-4BB3-9FEF-57B938DE6310.png') no-repeat;
+  background-position: -180px center;
   background-size: cover;
   height: 60vh;
   max-height: 480px;
@@ -31,12 +32,10 @@
 }
 
     @media (max-width: 768px) {
-      .hero {
-        height: 50vh;
-        max-height: 420px;
-        min-height: 300px;
-      }
-    }
+  .hero {
+    background-position: -120px center;
+  }
+}
 
     .hero-content {
       background: rgba(0, 0, 0, 0.65);
