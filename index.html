@@ -58,12 +58,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
-                   0 0 20px rgba(255, 170, 0, 0.3);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       line-height: 1.4;
       z-index: 1;
-      letter-spacing: 2px;
-      animation: fadeInUp 1s ease-out;
     }
 
     .hero-content {
@@ -71,51 +68,38 @@
       padding: 2.5rem;
       border-radius: 16px;
       max-width: 90%;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5),
-                  0 0 100px rgba(255, 170, 0, 0.1);
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
       z-index: 2;
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      animation: fadeIn 1s ease-out;
     }
 
     .logo img {
-      width: 140px;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease;
-    }
-
-    .logo img:hover {
-      transform: scale(1.05);
+      width: 120px;
+      margin-bottom: 1rem;
     }
 
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 800;
       margin: 0;
-      background: linear-gradient(45deg, #ffaa00, #ff7700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 2px 10px rgba(255, 170, 0, 0.3);
+      color: #ffaa00;
     }
 
     .tagline {
-      font-size: 1.5rem;
-      margin: 1.2rem 0;
+      font-size: 1.4rem;
+      margin: 1rem 0;
       font-weight: 600;
-      color: #fff;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
     .subtitle {
-      font-size: 1.2rem;
-      color: #ddd;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #ccc;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       padding: 2rem 1rem;
       margin: auto;
     }
@@ -123,41 +107,27 @@
     .card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 2.5rem;
-      margin: 2.5rem 0;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
       backdrop-filter: blur(8px);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     h2 {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(45deg, #ffaa00, #ff7700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 2rem;
-      margin-top: 0;
+      color: #ffaa00;
+      font-size: 1.8rem;
     }
 
     .roadmap {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .roadmap-item {
       border-left: 3px solid rgba(255, 170, 0, 0.3);
-      padding-left: 2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .roadmap-item:hover {
-      transform: translateX(10px);
+      padding-left: 1.5rem;
     }
 
     .roadmap-item.active {
@@ -167,70 +137,53 @@
     .phase {
       color: #ffaa00;
       font-weight: 600;
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
     }
 
     .roadmap-item h3 {
-      margin: 0.8rem 0;
-      font-size: 1.4rem;
+      margin: 0.5rem 0;
     }
 
     .roadmap-item ul {
-      padding-left: 1.2rem;
+      padding-left: 1rem;
       list-style: none;
-    }
-
-    .roadmap-item li {
-      margin: 0.8rem 0;
-      position: relative;
     }
 
     .roadmap-item li::before {
       content: '•';
       color: #ffaa00;
-      position: absolute;
-      left: -1.2rem;
-      font-size: 1.2em;
+      margin-right: 0.5rem;
     }
 
     .cta-container {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 1rem;
       justify-content: center;
       align-items: center;
-      margin-top: 2.5rem;
+      margin-top: 2rem;
     }
 
     .cta-button {
       text-decoration: none;
       font-family: 'Orbitron', sans-serif;
       font-weight: 600;
-      padding: 1.2rem 2rem;
-      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.5rem;
       border: none;
       width: 100%;
       max-width: 300px;
       justify-content: center;
       text-align: center;
       box-sizing: border-box;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
     }
 
     .primary {
       background: linear-gradient(45deg, #ffaa00, #ff7700);
       color: #000;
-    }
-
-    .primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 170, 0, 0.3);
     }
 
     .secondary {
@@ -239,34 +192,11 @@
       color: #fff;
     }
 
-    .secondary:hover {
-      background: rgba(255,255,255,0.15);
-      border-color: rgba(255,255,255,0.3);
-      transform: translateY(-2px);
-    }
-
     footer {
       text-align: center;
-      padding: 3rem 2rem;
-      color: #888;
+      padding: 2rem;
+      color: #666;
       font-size: 0.9rem;
-      background: linear-gradient(to top, #0a0a0a, transparent);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translate(-50%, -40%);
-      }
-      to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
     }
 
     @media (min-width: 768px) {
@@ -274,7 +204,7 @@
         flex-direction: row;
       }
       h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
       }
       .hero-banner-text {
         font-size: 3rem;
@@ -283,95 +213,102 @@
 
     @media (max-width: 767px) {
       .hero {
-        height: 80vh;
+        background-position: center center;
       }
       .hero-banner-text {
         font-size: 1.8rem;
       }
       .tagline {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
       .subtitle {
-        font-size: 1.1rem;
-      }
-      .card {
-        padding: 1.8rem;
-      }
-      h1 {
-        font-size: 2.4rem;
-      }
-      h2 {
-        font-size: 1.8rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-banner-text {
-        font-size: 1.5rem;
-      }
-      .hero-content {
-        padding: 1.5rem;
-      }
-    }
-
-    /* Dark mode optimization */
-    @media (prefers-color-scheme: dark) {
-      html {
-        color-scheme: dark;
-      }
-    }
-
-    /* Improved touch targets for mobile */
-    @media (hover: none) {
-      .cta-button {
-        padding: 1.4rem 2rem;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Body content remains the same as your original code -->
-  
-  <script>
-    // Add smooth scroll behavior
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+  <div class="hero">
+    <div class="hero-banner-text">
+      YOUR WORK<br>
+      YOUR FUTURE<br>
+      YOUR TOKEN
+    </div>
+    <div class="hero-content">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/LandoCrissian/TradeNation/refs/heads/main/970C5BAC-67E3-4025-8A62-F124FF1B2D37.png" alt="Trade Nation Logo">
+      </div>
+      <h1>TRADE NATION</h1>
+      <p class="tagline">Crypto with Callouses</p>
+      <p class="subtitle">$TRDN is the token of the working class.<br>Built for the ones who grind.</p>
+    </div>
+  </div>
 
-    // Add touch feedback
-    const buttons = document.querySelectorAll('.cta-button');
-    buttons.forEach(button => {
-      button.addEventListener('touchstart', () => {
-        button.style.transform = 'scale(0.98)';
-      });
-      button.addEventListener('touchend', () => {
-        button.style.transform = 'scale(1)';
-      });
-    });
+  <div class="container">
+    <section class="card">
+      <h2>What is Trade Nation?</h2>
+      <p>Trade Nation is a movement for those who keep the world moving — builders, healers, fixers, drivers, and everyone in between. $TRDN is a token that represents sweat equity. It's time the backbone of society had a stake in the future they build.</p>
+    </section>
 
-    // Intersection Observer for animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    <section class="card">
+      <h2>The Vision</h2>
+      <p>$TRDN will power tools for the working class: job bounties, verified labor rewards, gear NFTs, sponsorship pools, and more. We're just getting started.</p>
+    </section>
 
-    document.querySelectorAll('.card').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'all 0.6s ease-out';
-      observer.observe(card);
-    });
-  </script>
+    <section class="card">
+      <h2>Roadmap</h2>
+      <div class="roadmap">
+        <div class="roadmap-item active">
+          <div class="phase">Phase 1</div>
+          <div class="content">
+            <h3>Token Launch</h3>
+            <ul>
+              <li>Launch on Cronos Network</li>
+              <li>Community Building</li>
+              <li>Marketing Campaign</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="phase">Phase 2</div>
+          <div class="content">
+            <h3>Platform Development</h3>
+            <ul>
+              <li>Job Bounty System</li>
+              <li>Labor Verification</li>
+              <li>Partnership Program</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="phase">Phase 3</div>
+          <div class="content">
+            <h3>Ecosystem Growth</h3>
+            <ul>
+              <li>NFT Marketplace</li>
+              <li>Rewards Platform</li>
+              <li>Community DAO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Join the Movement</h2>
+      <div class="cta-container">
+        <a href="https://discord.gg/8CnJJDwC" target="_blank" class="cta-button primary">
+          <i class="fab fa-discord"></i> Join Discord
+        </a>
+        <a href="https://x.com/tradenationtrdn?s=21" target="_blank" class="cta-button secondary">
+          <i class="fab fa-x-twitter"></i> Follow on 𝕏
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Trade Nation. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
